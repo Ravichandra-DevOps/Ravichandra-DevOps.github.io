@@ -1,0 +1,267 @@
+<!doctype html>
+<!-- Copyright (c) 2026 Ravichandra. All rights reserved. Unauthorised copying or reuse of this site is prohibited. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ravichandra — Senior Multi-Cloud DevOps Engineer</title>
+  <meta name="description" content="Ravichandra — Senior Multi-Cloud DevOps Engineer with 10 years across AWS, Azure, GCP, Kubernetes, Terraform, CI/CD and observability." />
+  <meta property="og:title" content="Ravichandra — Senior Multi-Cloud DevOps Engineer" />
+  <meta property="og:description" content="10 years · AWS · Azure · GCP · Kubernetes · Terraform · CI/CD · Observability. A portfolio that talks back." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ravichandra-devops.github.io/assets/og.jpg" />
+  <meta property="og:url" content="https://ravichandra-devops.github.io/" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ravichandra — Senior Multi-Cloud DevOps Engineer" />
+  <meta name="twitter:image" content="https://ravichandra-devops.github.io/assets/og.jpg" />
+  <meta name="theme-color" content="#05060a" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2305060a'/><text x='50%' y='58%' text-anchor='middle' font-family='monospace' font-weight='700' font-size='30' fill='%233ef2ff'>RV</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__term">
+      <div class="loader__bar"><i></i><i></i><i></i><span>ravichandra@prod: ~</span></div>
+      <pre id="loaderLog"></pre>
+      <div class="loader__progress"><span id="loaderFill"></span></div>
+      <div class="loader__pct" id="loaderPct">0%</div>
+    </div>
+    <div class="gate" id="gate">
+      <button class="btn btn--primary btn--lg" id="enterSound"><span class="btn__icon">▶</span> Enter with sound</button>
+      <button class="gate__mute" id="enterMute">enter without sound</button>
+      <p class="gate__hint">🎧 best with headphones · Ravichandra will walk you through his work</p>
+    </div>
+  </div>
+
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="letterbox" aria-hidden="true"><i></i><i></i></div>
+    <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__logo" data-magnetic><span>RV</span><em>/devops</em></a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#stack">Stack</a>
+      <a href="#pipeline">Pipeline</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn" id="termBtn" title="Open terminal  ( ` )" aria-label="Open terminal" data-magnetic>&gt;_</button>
+      <a class="btn btn--ghost btn--sm" href="assets/Ravichandra_Resume.pdf" download data-magnetic>Resume ↓</a>
+    </div>
+  </header>
+
+  <main id="smooth">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="hero__presenting">▶ now presenting</p>
+          <p class="eyebrow"><span class="pulse"></span> Available · open to new opportunities</p>
+          <h1 class="hero__title" id="heroTitle"><span class="line">Ravichandra</span></h1>
+          <p class="hero__role"><span class="hero__role-main">Senior Multi-Cloud DevOps Engineer</span><span class="rotator" id="rotator">AWS · Azure · GCP</span></p>
+          <p class="hero__lead">10 years turning fragile releases into boring, automated, observable pipelines across <b class="c-aws">AWS</b>, <b class="c-azure">Azure</b> &amp; <b class="c-gcp">GCP</b>.</p>
+          <div class="hero__cta">
+            <button class="btn btn--primary" id="playIntro" data-magnetic><span class="btn__icon">▶</span> Hear my intro</button>
+            <button class="btn btn--ghost" id="startTour" data-magnetic>🎧 Guided voice tour</button>
+          </div>
+          <div class="hero__meta">
+            <span>📍 Hyderabad · Remote OK</span><span>☁ 3 clouds</span><span>⎈ K8s · EKS · AKS · OpenShift</span>
+          </div>
+        </div>
+        <div class="presenter-slot" id="presenterSlot" aria-hidden="true"></div>
+      </div>
+      <div class="scroll-hint"><span>scroll</span><i></i></div>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee" aria-label="Tools">
+      <div class="marquee__row" id="marquee1"></div>
+      <div class="marquee__row marquee__row--rev" id="marquee2"></div>
+    </section>
+
+    <!-- ============ ABOUT / STATS ============ -->
+    <section class="about section" id="about">
+      <p class="kicker">// 01 — whoami</p>
+      <h2 class="reveal-text big">I make deployments <em>boring</em>. Reliable, secure, observable, and on autopilot, so teams can ship <em>daily</em> without fear.</h2>
+      <div class="stats" id="stats"></div>
+      <div class="about__cols">
+        <p>Senior Multi-Cloud DevOps Engineer with <b>10 years</b> building, securing and operating enterprise CI/CD pipelines and container platforms across <b>AWS, Azure, GCP</b> and on-prem. I've delivered for <b>banking, insurance, life sciences and telecom</b>, where "it works on my machine" is not an option.</p>
+        <p>My pipelines ship with security built in: <b>SAST, SCA, secret scanning, image scanning, SBOM and licence checks</b> as gates, plus automated rollback. My infrastructure is code: <b>60+ Terraform modules</b>. And my systems tell you what's wrong before users do.</p>
+      </div>
+    </section>
+
+    <!-- ============ CLOUDS ============ -->
+    <section class="clouds section" id="clouds">
+      <p class="kicker">// 02 — multi-cloud</p>
+      <h2 class="h2">Three clouds. <span class="grad">One playbook.</span></h2>
+      <div class="clouds__grid" id="cloudGrid"></div>
+    </section>
+
+    <!-- ============ STACK (assembling logos) ============ -->
+    <section class="stack" id="stack">
+      <div class="stack__pin">
+        <div class="stack__head">
+          <p class="kicker">// 03 — the toolbox</p>
+          <h2 class="h2">40+ tools, <span class="grad">all run in production.</span></h2>
+        </div>
+        <div class="stack__board" id="stackBoard"></div>
+      </div>
+    </section>
+
+    <!-- ============ PIPELINE (horizontal) ============ -->
+    <section class="pipeline" id="pipeline">
+      <div class="pipeline__pin">
+        <div class="pipeline__head">
+          <p class="kicker">// 04 — how I ship</p>
+          <h2 class="h2">commit → <span class="grad">production</span></h2>
+          <div class="pipeline__status"><span class="dot"></span><code id="pipeStatus">pipeline #4821 · running</code></div>
+        </div>
+        <div class="pipeline__track" id="pipeTrack">
+          <div class="pipeline__wire"><span id="pipeFill"></span><i id="pipePacket"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="experience section" id="experience">
+      <p class="kicker">// 05 — git log --career</p>
+      <h2 class="h2">10 years. <span class="grad">4 enterprises.</span></h2>
+      <div class="timeline" id="timeline">
+        <div class="timeline__line"><span id="timelineFill"></span></div>
+      </div>
+      <p class="edu">🎓 <span id="edu"></span></p>
+    </section>
+
+    <!-- ============ OBSERVABILITY DASHBOARD ============ -->
+    <section class="obs section" id="observability">
+      <p class="kicker">// 06 — career telemetry</p>
+      <h2 class="h2">If my career were a <span class="grad">Grafana dashboard</span></h2>
+      <div class="dash">
+        <div class="dash__bar">
+          <span class="dash__title">⎈ ravichandra / production-overview</span>
+          <span class="dash__range">Last 10 years ▾</span>
+          <span class="dash__live"><span class="pulse"></span> LIVE</span>
+        </div>
+        <div class="dash__grid">
+          <div class="panel panel--stat"><h4>Availability SLO</h4><div class="gauge"><svg viewBox="0 0 120 70"><path d="M10 60a50 50 0 0 1 100 0" class="gauge__bg"/><path d="M10 60a50 50 0 0 1 100 0" class="gauge__fg" id="gaugeFg"/></svg><b data-count="99.9" data-dec="1">0</b><small>%</small></div></div>
+          <div class="panel panel--stat"><h4>Deploy frequency</h4><div class="stat-big"><b>Daily</b><small class="up">▲ from weekly</small></div></div>
+          <div class="panel panel--stat"><h4>Lead time for changes</h4><div class="stat-big"><b data-count="70">0</b><small>% faster</small></div></div>
+          <div class="panel panel--stat"><h4>Cloud cost</h4><div class="stat-big"><b data-count="-25" data-prefix="">0</b><small>% (AWS)</small></div></div>
+          <div class="panel panel--wide"><h4>Requests / sec · p99 latency</h4><canvas id="latency" height="160"></canvas></div>
+          <div class="panel panel--logs"><h4>Logs · stdout</h4><div class="logs" id="logs"></div></div>
+          <div class="panel"><h4>Releases / year</h4><div class="bars" id="bars"></div></div>
+          <div class="panel"><h4>Skills heatmap</h4><div class="heat" id="heat"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GITHUB ============ -->
+    <section class="gh section" id="github">
+      <div class="gh__card" data-tilt>
+        <div class="gh__left">
+          <p class="kicker">// 07 — open source</p>
+          <h2 class="h2">github.com/<span class="grad">Ravichandra-DevOps</span></h2>
+          <p class="muted">Most of my best work lives behind client firewalls. Here's what's public: live from the GitHub API.</p>
+          <a class="btn btn--primary" href="https://github.com/Ravichandra-DevOps" target="_blank" rel="noopener" data-magnetic>View GitHub ↗</a>
+        </div>
+        <div class="gh__right">
+          <div class="gh__graph" id="ghGraph"></div>
+          <ul class="gh__repos" id="ghRepos"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact section" id="contact">
+      <p class="kicker">// 08 — kubectl apply -f hire.yaml</p>
+      <h2 class="contact__big"><span>Let's ship</span><span class="line--outline">something.</span></h2>
+      <div class="contact__links">
+        <a class="btn btn--primary btn--lg" href="mailto:ravichandra.devops1993@gmail.com" data-magnetic>✉ ravichandra.devops1993@gmail.com</a>
+        <a class="btn btn--ghost btn--lg" href="https://www.linkedin.com/in/ravichandravajinepalli" target="_blank" rel="noopener" data-magnetic>in LinkedIn ↗</a>
+        <a class="btn btn--ghost btn--lg" href="assets/Ravichandra_Resume.pdf" download data-magnetic>⇩ Download resume</a>
+      </div>
+      <footer class="foot">
+        <span>© <span id="yr"></span> Ravichandra · Senior Multi-Cloud DevOps Engineer</span>
+        <span class="muted">Built with GSAP · Three.js · Web Speech API — press <kbd>`</kbd> for a terminal</span>
+      </footer>
+    </section>
+  </main>
+
+  <!-- ============ PRESENTER (living portrait) ============ -->
+  <div class="presenter" id="presenter">
+    <div class="presenter__stage">
+      <div class="presenter__card" aria-hidden="true"></div>
+      <div class="presenter__shadow" aria-hidden="true"></div>
+      <div class="presenter__body">
+        <img class="presenter__still" src="assets/presenter-full.png" alt="Ravichandra" />
+        <canvas id="presenterLive" aria-hidden="true"></canvas>
+        <canvas id="presenterVideo" aria-label="Ravichandra speaking"></canvas>
+      </div>
+      <button class="piku-wrap" id="piku" aria-label="Piku, Ravichandra's assistant. Tap to chat"></button>
+    </div>
+    <div class="presenter__ui">
+    <div class="presenter__tag"><b>Ravichandra</b><span>Senior Multi-Cloud DevOps Engineer</span></div>
+    <div class="presenter__ctrl">
+      <button class="icon-btn" id="presenterTalk" title="Explain this section" aria-label="Explain this section">▶</button>
+      <button class="icon-btn" id="presenterMute" title="Narration on/off" aria-label="Toggle narration">🔊</button>
+      <span class="presenter__wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span id="presenterStatus">tap to talk</span>
+    </div>
+    </div>
+  </div>
+
+  <div class="piku-bubble" id="pikuBubble" role="status"></div>
+
+  <div class="captions" id="captions" aria-live="polite">
+    <span class="captions__who">RAVICHANDRA</span>
+    <div class="captions__text" id="captionText"></div>
+    <button class="icon-btn" id="stopVoice" aria-label="Stop speaking">■</button>
+  </div>
+
+  <!-- ============ AI BOT ============ -->
+  <button class="bot-fab" id="botFab" aria-label="Chat with Piku" data-magnetic>
+    <span class="bot-fab__orb piku-mini"></span><span class="bot-fab__label">Ask Piku</span>
+  </button>
+  <aside class="bot" id="bot" aria-label="Ravi.SI chat" aria-hidden="true">
+    <div class="bot__head">
+      <div class="bot__orb piku-mini"></div>
+      <div><b>Piku</b><small><span class="pulse"></span> powered by Ravi.SI · Super Intelligence</small></div>
+      <button class="icon-btn bot__speak on" id="botSpeak" title="Voice replies on/off" aria-label="Toggle voice replies">🔊</button>
+      <button class="icon-btn" id="botClose" aria-label="Close chat">✕</button>
+    </div>
+    <div class="bot__msgs" id="botMsgs"></div>
+    <div class="bot__chips" id="botChips"></div>
+    <form class="bot__input" id="botForm" autocomplete="off">
+      <button type="button" class="icon-btn" id="botMic" title="Ask by voice" aria-label="Ask by voice">🎙</button>
+      <input id="botText" placeholder="Ask about AWS, K8s, experience…" aria-label="Message" />
+      <button class="icon-btn icon-btn--accent" aria-label="Send">➤</button>
+    </form>
+  </aside>
+
+  <!-- ============ TERMINAL ============ -->
+  <div class="term" id="term" aria-hidden="true">
+    <div class="term__win">
+      <div class="loader__bar"><i></i><i></i><i></i><span>ravichandra@portfolio: ~ (type 'help')</span><button class="icon-btn" id="termClose" aria-label="Close terminal">✕</button></div>
+      <div class="term__out" id="termOut"></div>
+      <form class="term__in" id="termForm" autocomplete="off"><span>➜ ~</span><input id="termInput" spellcheck="false" aria-label="Terminal input" /></form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/" } }</script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
